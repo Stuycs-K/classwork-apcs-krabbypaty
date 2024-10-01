@@ -74,6 +74,11 @@ public class ArrayMethods {
      * cols is 0. e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
      */
     public static int[][] swapRC(int[][] nums) {
-        return new int[1][1];
+        int[][] newAry = new int[nums[1].length][nums.length]
+        for (int i = 0; i < nums[i].length; i++) {
+            for (int idx = 0; idx < nums.length; idx++) {
+
+            }
+        }
     }
 }
