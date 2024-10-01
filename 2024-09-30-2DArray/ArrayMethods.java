@@ -12,9 +12,14 @@ public class ArrayMethods {
         int[][] arr1 = new int[][]{{1, 2, 3}, {4, 5, 6}};
         int[][] arr2 = new int[][]{{7, 8, 9}, {0, 1}, {8}};
         int[][] arr3 = new int[][]{{}};
+        //arrtostring 2d array test
         System.out.println(arrToString(arr1));
         System.out.println(arrToString(arr2));
         System.out.println(arrToString(arr3));
+        // arr2dSum tests
+        System.out.println("Expected 21 and got " + (arr2DSum(arr1)));
+        System.out.println("Expected 33 and got " + (arr2DSum(arr2)));
+        System.out.println("Expected 0 and got " + (arr2DSum(arr3)));
     }
 
     public static String arrToString(int[] ary) {
@@ -54,8 +59,13 @@ public class ArrayMethods {
 
     /* Return the sum of all of the values in the 2D array */
     public static int arr2DSum(int[][] nums) {
-        // use a nested loop to solve this
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int idx = 0; idx < nums[i].length; idx++) {
+                sum += nums[i][idx];
+            }
+        }
+        return sum;
     }
 
     /**
