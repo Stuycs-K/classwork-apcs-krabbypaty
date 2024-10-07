@@ -26,7 +26,16 @@ public class ArrayDemo{
   //as long as the parameters are different! (type and/or quantity must be different)
   //Pro tip: you should be using your 1D arrToString in this method!
   public static String arrToString(int[][]ary){
-    return "";
+    String newStr = "[";
+    for (int i = 0; i < ary.length; i++) {
+        newStr += arrToString(ary[i]);
+        if (i == ary.length - 1) {
+            newStr += "";
+        } else {
+            newStr += ", ";
+        }
+    }
+    return newStr + "]";
   }
 
   //1. Calculate and return how many elements equal zero in the 2D array.
