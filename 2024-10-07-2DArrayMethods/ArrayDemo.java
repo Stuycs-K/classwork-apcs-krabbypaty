@@ -113,7 +113,19 @@ public class ArrayDemo {
   // If you don't see a good way to do that, you should stop and look at prior
   // methods.
   public static int[][] copy(int[][] nums) {
-    return new int[1][1];
+    int[] newAry = new int[ary.length];
+        for (int i = 0; i < ary.length; i++) {
+          newAry[i] = ary[i];
+        }
+          return newAry;
+      }
+
+    public static int[][] copy(int[][] nums) {
+        int[][] newArr = new int[nums.length][];
+        for (int i = 0; i < nums.length; i++) {
+      newArr[i] = returnCopy(nums[i]);
+    }
+    return newArr;
   }
 
   // 5. Rotate an array by returning a new array with the rows and columns
