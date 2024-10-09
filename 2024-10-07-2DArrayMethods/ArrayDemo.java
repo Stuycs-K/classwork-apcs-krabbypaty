@@ -12,7 +12,9 @@ public class ArrayDemo {
     int[][] TwoDarr1 = new int[][] { { 2, 3, 0 }, { -5, -2, 9 } };
     int[][] TwoDarr2 = new int[][] { {}, {} };
     int[][] TwoDarr3 = new int[][] { { 3, 5, 1, 4 }, { 0, 0, 0 }, { 5, 6 } };
+    //compare
     System.out.println("Built in:" + Arrays.toString(arr1) + " Mine:" + arrToString(arr1));
+    System.out.println("Built in:" + Arrays.deepToString(TwoDarr1) + " Mine:" + arrToString(TwoDarr1));
 
     //countZeroes2d tests
     System.out.println("Expected 1" + " Mine:" + countZeros2D(TwoDarr1));
@@ -23,6 +25,7 @@ public class ArrayDemo {
     System.out.println("Expected 7" + " Mine:" + arr2DSum(TwoDarr1));
     System.out.println("Expected 0" + " Mine:" + arr2DSum(TwoDarr2));
     System.out.println("Expected 24" + " Mine:" + arr2DSum(TwoDarr3));
+
   }
 
   // 0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -90,7 +93,17 @@ public class ArrayDemo {
   // that negative with the value 1
   // -All other negatives replace with 0
   public static void replaceNegative(int[][] vals) {
-
+    for (int i = 0; i < vals.length; i++) {
+      for (int idx = 0; idx < vals[i].length; idx++) {
+          if (vals[i][idx] < 0) {
+              vals[i][idx] = 0;
+          }
+          if (i == idx) {
+              vals[i][idx] = 1;
+          }
+      }
+  }
+  System.out.println(arrToString(vals));
   }
 
   // 4. Make a copy of the given 2d array.
