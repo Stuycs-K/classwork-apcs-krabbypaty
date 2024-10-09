@@ -12,6 +12,7 @@ public class ArrayDemo {
     int[][] TwoDarr1 = new int[][] { { 2, 3, 0 }, { -5, -2, 9 } };
     int[][] TwoDarr2 = new int[][] { {}, {} };
     int[][] TwoDarr3 = new int[][] { { 3, 5, 1, 4 }, { 0, 0, 0 }, { 5, 6 } };
+    int[][] TwoDarr4 = new int[][] {{1,2},{3}};
     //compare
     System.out.println("Built in:" + Arrays.toString(arr1) + " Mine:" + arrToString(arr1));
     System.out.println("Built in:" + Arrays.deepToString(TwoDarr1) + " Mine:" + arrToString(TwoDarr1));
@@ -26,6 +27,10 @@ public class ArrayDemo {
     System.out.println("Expected 0" + " Mine:" + arr2DSum(TwoDarr2));
     System.out.println("Expected 24" + " Mine:" + arr2DSum(TwoDarr3));
 
+    //htmlTable tests
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>" + " Mine:" + htmlTable(TwoDarr4));
+    System.out.println("Expected: <table><tr></tr><tr></tr></table>" + " Mine:" + arr2DSum(TwoDarr2));
+    System.out.println("Expected <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>" + " Mine:" + htmlTable(TwoDarr3));
   }
 
   // 0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -151,5 +156,5 @@ public class ArrayDemo {
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][] nums) {
     return "";
-  }
+}
 }
