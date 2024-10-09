@@ -28,9 +28,9 @@ public class ArrayDemo {
     System.out.println("Expected 24" + " Mine:" + arr2DSum(TwoDarr3));
 
     //htmlTable tests
-    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>" + " Mine:" + htmlTable(TwoDarr4));
-    System.out.println("Expected: <table><tr></tr><tr></tr></table>" + " Mine:" + arr2DSum(TwoDarr2));
-    System.out.println("Expected <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>" + " Mine:" + htmlTable(TwoDarr3));
+    System.out.println("Mine:" + htmlTable(TwoDarr4) + " Are they equal? " + htmlTable(TwoDarr4).equals("<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"));
+    System.out.println("Mine:" + htmlTable(TwoDarr2) + " Are they equal? " + htmlTable(TwoDarr2).equals("<table><tr></tr><tr></tr></table>"));
+    System.out.println("Mine:" + htmlTable(TwoDarr4) + " Are they equal? " + htmlTable(TwoDarr4).equals("<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"));
   }
 
   // 0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -155,6 +155,19 @@ public class ArrayDemo {
   // e.g. htmlTable(new int[][]{{1,2},{3}}) returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][] nums) {
-    return "";
+    String str = "";
+    str += "<table>";
+    for (int i = 0; i < nums.length; i++) {
+      str += "<tr>";
+      for (int idx = 0; idx < nums[i].length; idx++) {
+        str += "<td>";
+        str += nums[i][idx];
+        str += "</td>";
+  }
+  str += "</tr>";
+}
+str += "</table>";
+return str;
 }
 }
+
