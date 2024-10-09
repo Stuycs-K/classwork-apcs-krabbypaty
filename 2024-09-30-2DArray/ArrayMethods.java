@@ -33,7 +33,8 @@ public class ArrayMethods {
         replaceNegative(arr5);
         // copy tests
         System.out.println("Expected { { 1, 2, 3 }, { 4, 5, 6 } }" + "Got:" + arrToString(copy(arr1)));
-        System.out.println("Expected { {} }" + "Got:" + arrToString(copy(arr3)));
+        arr1 = new int[][] {{5, 6}, {6, 4}};
+        System.out.println("Expected {{5, 6}, {6, 4}}" + "Got:" + arrToString(copy(arr1)));
     }
 
     public static String arrToString(int[] ary) {
