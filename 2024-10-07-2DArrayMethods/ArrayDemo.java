@@ -6,7 +6,15 @@ public class ArrayDemo{
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.return "";method()
     int[] arr1 = new int[] {1, 2, 3, 4, 5};
-    System.out.println("Built in:" + Arrays.toString(arr1) + "Mine:" + arrToString(arr1));
+    int[][] TwoDarr1 = new int[][] {{2, 3, 0}, {-5, -2, 9}};
+    int[][] TwoDarr2 = new int[][] {{}, {}};
+    int[][] TwoDarr3 = new int[][] {{3, 5, 1, 4}, {0, 0, 0}, {5, 6}};
+    System.out.println("Built in:" + Arrays.toString(arr1) + " Mine:" + arrToString(arr1));
+
+    //arr2dsum tests
+    System.out.println("Expected 7" + " Mine:" + arr2DSum(TwoDarr1));
+    System.out.println("Expected 0" + " Mine:" + arr2DSum(TwoDarr2));
+    System.out.println("Expected 24" + " Mine:" + arr2DSum(TwoDarr3));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -47,7 +55,13 @@ public class ArrayDemo{
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
   public static int arr2DSum(int[][]nums){
-    return 0;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+      for (int idx = 0; idx < nums[i].length; idx++) {
+        sum += nums[i][idx];
+      }
+    }
+    return sum;
   }
 
   //3. Modify a given 2D array of integer as follows:
@@ -85,3 +99,4 @@ public class ArrayDemo{
     return "";
   }
 }
+
