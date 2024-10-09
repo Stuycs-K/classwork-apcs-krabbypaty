@@ -25,14 +25,15 @@ public class ArrayMethods {
         System.out.println("Expected 0 and got " + (arr2DSum(arr3)));
         //swapRC tests
         System.out.println("expected {{1,4},{2,5},{3,6}} actual:" + arrToString(swapRC(arr1)));
-        System.out.println("expected {{2}, {0}} actual:" + arrToString(swapRC(arr6)));
+        System.out.println("expected {{0}, {2}} actual:" + arrToString(swapRC(arr6)));
         // replaceNegative tests
         System.out.println("expected {{1, 3}, {0, 3}, {0, 2, 1}} actual:");
         replaceNegative(arr4);
         System.out.println("expected {{1, 0}, {}, {0, 2, 1}} actual:");
         replaceNegative(arr5);
         // copy tests
-        System.out.println(arrToString(copy(arr1)));
+        System.out.println("Expected { { 1, 2, 3 }, { 4, 5, 6 } }" + "Got:" + arrToString(copy(arr1)));
+        System.out.println("Expected { {} }" + "Got:" + arrToString(copy(arr3)));
     }
 
     public static String arrToString(int[] ary) {
