@@ -15,12 +15,12 @@ public class ArrayDemo {
     System.out.println("Built in:" + Arrays.toString(arr1) + " Mine:" + arrToString(arr1));
 
     //countZeroes2d tests
-    System.out.println("Expected 7" + " Mine:" + countZeros2D(TwoDarr1));
+    System.out.println("Expected 1" + " Mine:" + countZeros2D(TwoDarr1));
     System.out.println("Expected 0" + " Mine:" + countZeros2D(TwoDarr2));
-    System.out.println("Expected 24" + " Mine:" + countZeros2D(TwoDarr3));
+    System.out.println("Expected 3" + " Mine:" + countZeros2D(TwoDarr3));
 
     // arr2dsum tests
-    System.out.println("Expected 1" + " Mine:" + arr2DSum(TwoDarr1));
+    System.out.println("Expected 7" + " Mine:" + arr2DSum(TwoDarr1));
     System.out.println("Expected 0" + " Mine:" + arr2DSum(TwoDarr2));
     System.out.println("Expected 24" + " Mine:" + arr2DSum(TwoDarr3));
   }
@@ -57,7 +57,16 @@ public class ArrayDemo {
 
   // 1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+      for (int idx = 0; idx < nums[i].length; idx++) {
+        if (nums[i][idx] == 0)
+        {
+          sum +=1;
+        }
+      }
+    }
+    return sum;
   }
 
   // 2. Calculate the sum of a 2d array
