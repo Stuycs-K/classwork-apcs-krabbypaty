@@ -20,9 +20,9 @@ public class Animal {
   Note: you MUST use getName() getNoise() here! You will see why later.
   */
   public void speak(){
-    System.out.println("My name is " + name + ".");
+    System.out.println("My name is " + this.getName() + ".");
     System.out.println("I am " + age + " years old.");
-    System.out.println("I say " + noise + ".");
+    System.out.println("I say " + this.getNoise() + ".");
   }
 
   public String getName(){
@@ -30,5 +30,8 @@ public class Animal {
   }
   public String getNoise(){
     return noise;
+  }
+  public int getAge(){
+    return age;
   }
 }
