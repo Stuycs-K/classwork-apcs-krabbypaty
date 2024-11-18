@@ -9,6 +9,7 @@ public static void main(String args[]) {
     System.out.println(sc1.next());
   }
   System.out.println(sum(sc2));
+  System.out.println(TriangleTester.countTrianglesA("Test"));
 }
 public static int sum(Scanner x) {
 int sum = 0;
