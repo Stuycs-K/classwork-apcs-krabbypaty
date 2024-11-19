@@ -42,13 +42,13 @@ public class TriangleTester {
         t3s1 = input.nextInt();
         t3s2 = input.nextInt();
         t3s3 = input.nextInt();
-        if(validTriangle(t1s1, t1s2, t1s3)){
+        if(validTriangle(t1s1, t2s1, t3s1)){
           counter++;
         }
-        if(validTriangle(t2s1, t2s2, t2s3)){
+        if(validTriangle(t1s2, t2s2, t3s2)){
             counter++;
           }
-        if(validTriangle(t3s1, t3s2, t3s3)){
+        if(validTriangle(t1s3, t2s3, t3s3)){
             counter++;
       }
   }
@@ -56,5 +56,6 @@ public class TriangleTester {
 }catch(FileNotFoundException ex){
   System.out.println("File not found");
   return 0;
+}
 }
 }
