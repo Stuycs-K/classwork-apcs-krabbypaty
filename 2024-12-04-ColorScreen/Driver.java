@@ -39,7 +39,6 @@ public class Driver {
             }
             System.out.print(" ".repeat(20) + randomInt[i]);
         }
-        //System.out.print(" ".repeat(20) + randomInt[0] + " ".repeat(20) + randomInt[1] + " ".repeat(20) + randomInt[2]);
     }
     public static void main(String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
