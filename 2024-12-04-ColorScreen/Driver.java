@@ -1,3 +1,6 @@
+import java.util.Arrays;
+
+
 public class Driver {
 
     public static void printBackground(int color2) {
@@ -15,8 +18,17 @@ public class Driver {
             System.out.print(backChar);
         }
     }
+
+    public static void randomInteger() {
+        int[] randomInt = new int[3];
+        for (int i = 0; i < randomInt.length; i++) {
+            randomInt[i] = (int) (Math.random() * 99);
+        }
+        System.out.println(Arrays.toString(randomInt));
+    }
     public static void main(String[] args) {
         printBackground(Text.CYAN);
+        randomInteger();
     }
 }
 
