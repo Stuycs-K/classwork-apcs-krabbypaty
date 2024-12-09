@@ -29,8 +29,11 @@ public class Alchemist extends Adventurer {
   public abstract String attack(Adventurer other) {
     int damage = int 10;
     other.applyDamage(damage);
-    return other + "was dealt 10 damage";
+    return other + "was dealt 10 damage.";
   }
 
-  
+  public abstract String support(Adventurer other) {
+    other.restoreSpecial(20);
+    return name + "empowers" + other "!" + other + "receives a 20 hp heal potion."
+  }
 }
