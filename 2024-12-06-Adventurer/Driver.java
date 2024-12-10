@@ -5,14 +5,16 @@ public class Driver {
         Adventurer player = new Alchemist("fireball", "Singed", 100);
         Adventurer enemy = new CodeWarrior("Bob", 100, "java");
         System.out.println(player.getName() + ", " + player.getHP() + "/" + player.getmaxHP() + " HP, "
-                + player.getSpecial() + "/" + player.getSpecialMax() + player.getSpecialName());
+                + player.getSpecial() + "/" + player.getSpecialMax() + " " + player.getSpecialName());
         System.out.println(enemy.getName() + ", " + enemy.getHP() + "/" + enemy.getmaxHP() + " HP, "
-                + enemy.getSpecial() + "/" + enemy.getSpecialMax() + enemy.getSpecialName());
+                + enemy.getSpecial() + "/" + enemy.getSpecialMax() + " " + enemy.getSpecialName());
         Scanner userInput = new Scanner(System.in);
-        System.out.println("Enter username");
+        System.out.println("Type: (a)ttack / (sp)ecial / (su)pport\" / quit");
         // Read one line of user input
         String userName = userInput.nextLine();
-        // Do something with the input
+        if (userName.equals("a") || userName.equals(attack)) {
+
+        }
         System.out.println("Username is: " + userName);
         /*
          * Adventurer Alchemy = new Alchemist("fireball", "Singed", 100);
