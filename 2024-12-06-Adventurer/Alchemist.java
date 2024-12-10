@@ -3,37 +3,51 @@ public class Alchemist extends Adventurer {
   private int fury, furyMAX;
 
   public Alchemist(String ability, String name, int hp) {
-    super(name,hp);
+    super(name, hp);
     furyMAX = 100;
     fury = 100;
     this.ability = ability;
   }
 
-  public abstract String getSpecialName() {
+  public String getSpecialName() {
     return "fury";
   }
 
-  //accessor methods
-  public abstract int getSpecial() {
+  // accessor methods
+  public int getSpecial() {
     return fury;
   }
 
-  public abstract void setSpecial(int n) {
+  public void setSpecial(int n) {
     fury = n;
   }
 
-  public abstract int getSpecialMax() {
+  public int getSpecialMax() {
     return fury;
   }
 
-  public abstract String attack(Adventurer other) {
-    int damage = int 10;
+  public String attack(Adventurer other) {
+    int damage = 10;
     other.applyDamage(damage);
     return other + "was dealt 10 damage.";
   }
 
-  public abstract String support(Adventurer other) {
-    other.restoreSpecial(20);
-    return name + "empowers" + other "!" + other + "receives a 20 hp heal potion."
+  public String support(Adventurer other) {
+    other.setHP(other.getHP() + 5);
+    return other + "is empowered!" + other + "receives a 5 hp heal potion";
+  }
+
+  public String support() {
+    int hpBuff = 5;
+    int furyBuff = 20;
+    setHP(getHP() + hpBuff);
+    setSpecial(getSpecial() + furyBuff);
+    return "Gains 5 hp and 20 fury";
+  }
+
+  public String specialAttack(Adventurer other) {
+    if (getSpecial > 65) {
+      setSpecial(getSpecial() - 65)
+    }
   }
 }
