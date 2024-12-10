@@ -46,8 +46,13 @@ public class Alchemist extends Adventurer {
   }
 
   public String specialAttack(Adventurer other) {
-    if (getSpecial > 65) {
-      setSpecial(getSpecial() - 65)
+    if (getSpecial() > 20) {
+      setSpecial(getSpecial() - 20);
+      int Damage = (int) (Math.random() * 15) + 10;
+      other.applyDamage(Damage);
+      return other.getName() + "is dealt" + Damage;
+    } else {
+      return "Not enough fury. You only have" + getSpecial();
     }
   }
 }
